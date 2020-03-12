@@ -19,12 +19,12 @@ CardSwiper({this.herramientas});
  
      child: Swiper(
           layout: SwiperLayout.STACK,
-            itemWidth: _screenSize.width * 0.7,
-            itemHeight: _screenSize.height * 0.5,
+            itemWidth: _screenSize.width * 0.8,
+            itemHeight: _screenSize.height * 0.7,
           itemBuilder: (BuildContext context,int index){
             return ClipRRect(
                 borderRadius: BorderRadius.circular(20.0),
-                child: Image.network("https://image.freepik.com/vector-gratis/bote-madera-ninos_1308-26495.jpg",
+                child: Image.network("https://image.freepik.com/vector-gratis/fondo-lineas-zoom-estilo-comico-verde-vacio_1017-20555.jpg",
                   fit: BoxFit.cover )
 
             );
@@ -34,6 +34,7 @@ CardSwiper({this.herramientas});
           //pagination: new SwiperPagination(),
           //control: new SwiperControl(),
       ),
+      
   );
   }
 }
