@@ -4,13 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:cardinal_scout_app/src/pages/models/destination_model.dart';
 
 
+
 //import 'package:flutter_travel_ui/screens/destination_screen.dart';
 import 'package:cardinal_scout_app/src/pages/screens/destination_screen.dart';
 
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class DestinationCarousel extends StatelessWidget {
+class BlockCarousel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -21,14 +22,16 @@ class DestinationCarousel extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text(
-                'Top Destinations',
+                'Desafíos Tropa',
                 style: TextStyle(
                   fontSize: 22.0,
                   fontWeight: FontWeight.bold,
                   letterSpacing: 1.5,
                 ),
               ),
-              GestureDetector(
+// Boton Derecho Ver todos
+
+/*               GestureDetector(
                 onTap: () => print('See All'),
                 child: Text(
                   'See All',
@@ -39,17 +42,44 @@ class DestinationCarousel extends StatelessWidget {
                     letterSpacing: 1.0,
                   ),
                 ),
-              ),
+              ),  */
+
+
             ],
           ),
         ),
         Container(
           height: 300.0,
+
+          
+/* 
+          // prueba 
+
+          color: Colors.blue,
+          child: ListView.builder(
+            itemCount: destinations.length,
+            itemBuilder: (BuildContext context, int index){
+              return Text(destinations[index].city);
+
+            },           
+            
+            ),
+
+          //Fin Prueba
+ */
+
+
+
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
+
             itemCount: destinations.length,
+         
+
             itemBuilder: (BuildContext context, int index) {
               Destination destination = destinations[index];
+              
+             
               return GestureDetector(
                 onTap: () => Navigator.push(
                   context,
@@ -168,6 +198,9 @@ class DestinationCarousel extends StatelessWidget {
               );
             },
           ),
+
+          
+
         ),
       ],
     );

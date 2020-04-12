@@ -15,14 +15,16 @@ class HotelCarousel extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text(
-                'Exclusive Hotels',
+                'Areas de Crecimiento',
                 style: TextStyle(
                   fontSize: 22.0,
                   fontWeight: FontWeight.bold,
                   letterSpacing: 1.5,
                 ),
               ),
-              GestureDetector(
+              
+              
+/*               GestureDetector(
                 onTap: () => print('See All'),
                 child: Text(
                   'See All',
@@ -33,7 +35,9 @@ class HotelCarousel extends StatelessWidget {
                     letterSpacing: 1.0,
                   ),
                 ),
-              ),
+              ), */
+
+
             ],
           ),
         ),
@@ -73,15 +77,16 @@ class HotelCarousel extends StatelessWidget {
                                 ),
                               ),
                               SizedBox(height: 2.0),
-                              Text(
+                             /*  Text(
                                 hotel.address,
                                 style: TextStyle(
                                   color: Colors.grey,
                                 ),
-                              ),
+                              ), */
                               SizedBox(height: 2.0),
                               Text(
-                                '\$${hotel.price} / night',
+                                '${hotel.price} %',
+                                //'\$${hotel.price} %',
                                 style: TextStyle(
                                   fontSize: 18.0,
                                   fontWeight: FontWeight.w600,

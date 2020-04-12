@@ -1,16 +1,16 @@
 //import 'package:flutter_travel_ui/models/activity_model.dart';
 import 'package:cardinal_scout_app/src/pages/models/activity_model.dart';
 
-class Destination {
+class Block {
   String imageUrl;
-  String city;
+  String nombre;
   String country;
   String description;
   List<Activity> activities;
 
-  Destination({
+  Block({
     this.imageUrl,
-    this.city,
+    this.nombre,
     this.country,
     this.description,
     this.activities,
@@ -42,50 +42,36 @@ List<Activity> activities = [
     rating: 3,
     price: 125,
   ),
-    Activity(
-    imageUrl: 'assets/images/murano.jpg',
-    name: 'Murano and Burano Tour',
-    type: 'Sightseeing Tour',
-    startTimes: ['12:30 pm', '2:00 pm'],
-    rating: 3,
-    price: 125,
-  ),
 ];
 
-List<Destination> destinations = [
-  Destination(
+List<Block> blocks = [
+  Block(
     imageUrl: 'assets/images/Vigia.png',
-    city: 'Vigía',
+    nombre: 'Vigía',
     country: 'Italy',
-    description: 'Inicia tus desafíos y recorre con éxito el camino a ser un gran Explorador Scout.',
+    description: 'Visit Venice for an amazing and unforgettable adventure.',
     activities: activities,
   ),
-  Destination(
+  Block(
     imageUrl: 'assets/images/Explorador.png',
-    city: 'Explorador',
+    nombre: 'Explorador',
     country: 'France',
-    description: 'Inicia tus desafíos y recorre con éxito el camino a ser un gran Excursionista Scout.',
+    description: 'Visit Paris for an amazing and unforgettable adventure.',
     activities: activities,
   ),
-  Destination(
+  Block(
     imageUrl: 'assets/images/Excursionista.png',
-    city: 'Excursionista',
+    nombre: 'Excursionista',
     country: 'India',
-    description: 'Inicia tus desafíos y recorre con éxito el camino a ser un gran Expedicionario Scout.',
+    description: 'Visit New Delhi for an amazing and unforgettable adventure.',
     activities: activities,
   ),
-  Destination(
+  Block(
     imageUrl: 'assets/images/Expedicionario.png',
-    city: 'Expedicionario',
+    nombre: 'Expedicionario',
     country: 'Brazil',
-    description: 'Termina tus ultimos desafíos y peparate para una nueva estapa, ve y recorre nuevos caminos.',
+    description: 'Visit Sao Paulo for an amazing and unforgettable adventure.',
     activities: activities,
   ),
-/*   Destination(
-    imageUrl: 'assets/images/newyork.jpg',
-    city: 'New York City',
-    country: 'United States',
-    description: 'Visit New York for an amazing and unforgettable adventure.',
-    activities: activities,
-  ), */
+  
 ];

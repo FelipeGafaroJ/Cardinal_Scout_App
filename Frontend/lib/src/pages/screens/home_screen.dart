@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 //import 'package:flutter_travel_ui/widgets/destination_carousel.dart';
-import 'package:cardinal_scout_app/src/widgets/destination_carousel.dart';
+import 'package:cardinal_scout_app/src/widgets/block_carousel.dart';
 
 
 //import 'package:flutter_travel_ui/widgets/hotel_carousel.dart';
@@ -16,14 +16,16 @@ class HomeScreen extends StatefulWidget {
   _HomeScreenState createState() => _HomeScreenState();
 }
 
+
+//Iconos Superiores Dash
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
   int _currentTab = 0;
   List<IconData> _icons = [
-    FontAwesomeIcons.plane,
-    FontAwesomeIcons.bed,
-    FontAwesomeIcons.walking,
-    FontAwesomeIcons.biking,
+    FontAwesomeIcons.percentage,
+    FontAwesomeIcons.bahai,
+    FontAwesomeIcons.dragon,
+    FontAwesomeIcons.compass,
   ];
 
   Widget _buildIcon(int index) {
@@ -31,6 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
       onTap: () {
         setState(() {
           _selectedIndex = index;
+          
         });
       },
       child: Container(
@@ -56,20 +59,35 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: false,
+        title:Text('Cardinal Scout'),
+        backgroundColor: Colors.cyan[300],
+/*         actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: (){},
+          ) ,
+        ], */
+      ),
       body: SafeArea(
         child: ListView(
-          padding: EdgeInsets.symmetric(vertical: 30.0),
+          padding: EdgeInsets.symmetric(vertical: 5.0),
+         // padding: EdgeInsets.symmetric(vertical: 30.0),
+          
           children: <Widget>[
-            Padding(
-              padding: EdgeInsets.only(left: 20.0, right: 120.0),
+/*             Padding(              
+              padding: EdgeInsets.only(left: 135.0, right: 100.0),
               child: Text(
-                'What would you like to find?',
+                'DashBoard',
                 style: TextStyle(
                   fontSize: 30.0,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-            ),
+            ), */
+
+            // Mapa de iconos
             SizedBox(height: 20.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -82,12 +100,18 @@ class _HomeScreenState extends State<HomeScreen> {
                   .toList(),
             ),
             SizedBox(height: 20.0),
-            DestinationCarousel(),
+
+// Carrusel
+            BlockCarousel(),
             SizedBox(height: 20.0),
+
+
             HotelCarousel(),
           ],
         ),
       ),
+
+
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentTab,
         onTap: (int value) {
@@ -105,7 +129,9 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.local_pizza,
+              Icons.bubble_chart,
+              // Icons.apps,
+              //Icons.more_horiz,
               size: 30.0,
             ),
             title: SizedBox.shrink(),
@@ -113,7 +139,7 @@ class _HomeScreenState extends State<HomeScreen> {
           BottomNavigationBarItem(
             icon: CircleAvatar(
               radius: 15.0,
-              backgroundImage: NetworkImage('http://i.imgur.com/zL4Krbz.jpg'),
+              backgroundImage: NetworkImage('https://i.ibb.co/Xx9MrQ3/Goku.jpg'),
             ),
             title: SizedBox.shrink(),
           )
