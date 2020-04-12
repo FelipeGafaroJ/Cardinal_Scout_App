@@ -1,10 +1,11 @@
 class Activity {
   String imageUrl;
   String name;
-  String type;
-  String description;
+  String slug;
   bool status;
   bool pritority;
+  String type;
+  String description;
   int block_id;
   int category_id;
   List<String> startTimes;
@@ -16,10 +17,11 @@ class Activity {
   Activity({
     this.imageUrl,
     this.name,
-    this.type,
-    this.description,
+    this.slug,
     this.status,
     this.pritority,
+    this.type,
+    this.description,
     this.block_id,
     this.category_id,
     this.startTimes,

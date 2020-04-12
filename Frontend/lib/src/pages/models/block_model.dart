@@ -3,13 +3,17 @@ import 'package:cardinal_scout_app/src/pages/models/activity_model.dart';
 
 class Block {
   String imageUrl;
-  String bloque;
+  String name;
+  String slug;
+  bool status;
   String description;
   List<Activity> activities;
 
   Block({
     this.imageUrl,
-    this.bloque,  
+    this.name,
+    this.slug,
+    this.status,
     this.description,
     this.activities,
   });
@@ -53,25 +57,25 @@ List<Activity> activities = [
 List<Block> blocks = [
   Block(
     imageUrl: 'assets/images/Vigia.png',
-    bloque: 'Vigía',
+    name: 'Vigía',
     description: 'Inicia tus desafíos y recorre con éxito el camino a ser un gran Explorador Scout.',
     activities: activities,
   ),
   Block(
     imageUrl: 'assets/images/Explorador.png',
-    bloque: 'Explorador',
+    name: 'Explorador',
     description: 'Inicia tus desafíos y recorre con éxito el camino a ser un gran Excursionista Scout.',
     activities: activities,
   ),
   Block(
     imageUrl: 'assets/images/Excursionista.png',
-    bloque: 'Excursionista',
+    name: 'Excursionista',
     description: 'Inicia tus desafíos y recorre con éxito el camino a ser un gran Expedicionario Scout.',
     activities: activities,
   ),
   Block(
     imageUrl: 'assets/images/Expedicionario.png',
-    bloque: 'Expedicionario',
+    name: 'Expedicionario',
     description: 'Termina tus ultimos desafíos y peparate para una nueva estapa, ve y recorre nuevos caminos.',
     activities: activities,
   ),

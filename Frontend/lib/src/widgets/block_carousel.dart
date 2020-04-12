@@ -3,16 +3,9 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:cardinal_scout_app/src/pages/models/block_model.dart';
 import 'package:cardinal_scout_app/src/pages/screens/block_screen.dart';
 
-//import 'package:flutter_travel_ui/models/destination_model.dart';
+
 //import 'package:cardinal_scout_app/src/pages/models/destination_model.dart';
-
-
-//import 'package:flutter_travel_ui/screens/destination_screen.dart';
 //import 'package:cardinal_scout_app/src/pages/screens/destination_screen.dart';
-
-
-
-
 
 
 class BlockCarousel extends StatelessWidget {
@@ -177,7 +170,7 @@ class BlockCarousel extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
                                   Text(
-                                    block.bloque,
+                                    block.name,
                                     style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 24.0,

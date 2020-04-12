@@ -97,7 +97,7 @@ class _BlockScreenState extends State<BlockScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      widget.block.bloque,
+                      widget.block.name,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 35.0,

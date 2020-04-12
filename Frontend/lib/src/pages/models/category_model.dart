@@ -1,11 +1,13 @@
 class Category {
   String imageUrl;
   String name;
+  String slug;
   double porcentaje;
 
   Category({
     this.imageUrl,
     this.name,
+    this.slug,
     this.porcentaje,
   });
 }
