@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:cardinal_scout_app/src/pages/models/block_model.dart';
+import 'package:cardinal_scout_app/src/pages/screens/block_screen.dart';
 
 //import 'package:flutter_travel_ui/models/destination_model.dart';
-import 'package:cardinal_scout_app/src/pages/models/destination_model.dart';
-import 'package:cardinal_scout_app/src/pages/models/block_model.dart';
+//import 'package:cardinal_scout_app/src/pages/models/destination_model.dart';
 
 
 //import 'package:flutter_travel_ui/screens/destination_screen.dart';
-import 'package:cardinal_scout_app/src/pages/screens/destination_screen.dart';
-
-import 'package:cardinal_scout_app/src/pages/screens/block_screen.dart';
+//import 'package:cardinal_scout_app/src/pages/screens/destination_screen.dart';
 
 
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+
+
 
 class BlockCarousel extends StatelessWidget {
   @override
