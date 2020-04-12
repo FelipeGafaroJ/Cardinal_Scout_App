@@ -5,7 +5,8 @@ import 'package:cardinal_scout_app/src/widgets/block_carousel.dart';
 
 
 //import 'package:flutter_travel_ui/widgets/hotel_carousel.dart';
-import 'package:cardinal_scout_app/src/widgets/hotel_carousel.dart';
+import 'package:cardinal_scout_app/src/widgets/category_carousel.dart';
+
 
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -106,7 +107,7 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(height: 20.0),
 
 
-            HotelCarousel(),
+            CategoryCarousel(),
           ],
         ),
       ),

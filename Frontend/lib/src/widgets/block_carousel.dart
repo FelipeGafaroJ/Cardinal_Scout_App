@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 
 //import 'package:flutter_travel_ui/models/destination_model.dart';
 import 'package:cardinal_scout_app/src/pages/models/destination_model.dart';
-//import 'package:cardinal_scout_app/src/pages/models/block_model.dart';
+import 'package:cardinal_scout_app/src/pages/models/block_model.dart';
 
 
 //import 'package:flutter_travel_ui/screens/destination_screen.dart';
 import 'package:cardinal_scout_app/src/pages/screens/destination_screen.dart';
+
+import 'package:cardinal_scout_app/src/pages/screens/block_screen.dart';
 
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -76,19 +78,19 @@ class BlockCarousel extends StatelessWidget {
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
 
-            itemCount: destinations.length,
+            itemCount: blocks.length,
          
 
             itemBuilder: (BuildContext context, int index) {
-              Destination destination = destinations[index];
+              Block block = blocks[index];
               
              
               return GestureDetector(
                 onTap: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (_) => DestinationScreen(
-                      destination: destination,
+                    builder: (_) => BlockScreen(
+                      block: block,
                     ),
                   ),
                 ),
@@ -120,7 +122,7 @@ class BlockCarousel extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
                                 Text(
-                                  '${destination.activities.length} actividades',
+                                  '${block.activities.length} actividades',
                                   style: TextStyle(
                                     fontSize: 20.0,
                                     fontWeight: FontWeight.w600,
@@ -128,7 +130,7 @@ class BlockCarousel extends StatelessWidget {
                                   ),
                                 ),
                                 Text(
-                                  destination.description,
+                                  block.description,
                                   style: TextStyle(
                                     color: Colors.grey,
                                   ),
@@ -155,13 +157,13 @@ class BlockCarousel extends StatelessWidget {
                         child: Stack(
                           children: <Widget>[
                             Hero(
-                              tag: destination.imageUrl,
+                              tag: block.imageUrl,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(20.0),
                                 child: Image(
                                   height: 180.0,
                                   width: 220.0,
-                                  image: AssetImage(destination.imageUrl),
+                                  image: AssetImage(block.imageUrl),
                                   fit: BoxFit.cover,
                                 ),
                               ),
@@ -173,7 +175,7 @@ class BlockCarousel extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
                                   Text(
-                                    destination.city,
+                                    block.bloque,
                                     style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 24.0,
@@ -219,3 +221,10 @@ class BlockCarousel extends StatelessWidget {
     );
   }
 }
+
+
+
+
+
+
+
