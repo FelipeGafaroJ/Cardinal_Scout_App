@@ -19,6 +19,8 @@ class BlockScreen extends StatefulWidget {
 }
 
 class _BlockScreenState extends State<BlockScreen> {
+
+/*   
   Text _buildRatingStars(int rating) {
     String stars = '';
     for (int i = 0; i < rating; i++) {
@@ -26,7 +28,7 @@ class _BlockScreenState extends State<BlockScreen> {
     }
     stars.trim();
     return Text(stars);
-  }
+  } */
 
   @override
   Widget build(BuildContext context) {
