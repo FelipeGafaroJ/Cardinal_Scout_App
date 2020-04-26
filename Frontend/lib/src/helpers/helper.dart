@@ -6,10 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_html/flutter_html.dart';
-//import 'package:revoxfood/generated/i18n.dart';
-//import 'package:revoxfood/src/models/food_order.dart';
-//import 'package:revoxfood/src/repository/settings_repository.dart';
-//import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:cardinalscout/generated/i18n.dart';
+import 'package:cardinalscout/src/repository/settings_repository.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:html/dom.dart' as dom;
 import 'package:html/parser.dart';
 
@@ -38,7 +37,7 @@ class Helper {
     return (await fi.image.toByteData(format: ui.ImageByteFormat.png)).buffer.asUint8List();
   }
 
-/*   static Future<Marker> getMarker(Map<String, dynamic> res) async {
+  static Future<Marker> getMarker(Map<String, dynamic> res) async {
     final Uint8List markerIcon = await getBytesFromAsset('assets/img/marker.png', 120);
     final Marker marker = Marker(
         markerId: MarkerId(res['id']),
@@ -68,7 +67,7 @@ class Helper {
 
     return marker;
   }
- */
+
   static List<Icon> getStarsList(double rate, {double size = 18}) {
     var list = <Icon>[];
     list = List.generate(rate.floor(), (index) {
@@ -101,7 +100,7 @@ class Helper {
 //    }
 //  }
 
-  /* static Widget getPrice(double myPrice, BuildContext context, {TextStyle style}) {
+  static Widget getPrice(double myPrice, BuildContext context, {TextStyle style}) {
     if (style != null) {
       style = style.merge(TextStyle(fontSize: style.fontSize + 2));
     }
@@ -134,28 +133,19 @@ class Helper {
     } catch (e) {
       return Text('');
     }
-  } */
-
- /*  static double getTotalOrderPrice(FoodOrder foodOrder, double tax, double deliveryFee) {
-    double total = foodOrder.price * foodOrder.quantity;
-    foodOrder.extras.forEach((extra) {
-      total += extra.price != null ? extra.price : 0;
-    });
-    total += deliveryFee;
-    total += tax * total / 100;
-    return total;
   }
- */
-  /* static String getDistance(double distance) {
+
+
+  static String getDistance(double distance) {
     // TODO get unit from settings
     return distance != null ? distance.toStringAsFixed(2) + " mi" : "";
-  } */
+  }
 
-  /* static String skipHtml(String htmlString) {
+  static String skipHtml(String htmlString) {
     var document = parse(htmlString);
     String parsedString = parse(document.body.text).documentElement.text;
     return parsedString;
-  } */
+  }
 
   static Html applyHtml(context, String html, {TextStyle style}) {
     return Html(
@@ -193,7 +183,7 @@ class Helper {
     return text.substring(0, min<int>(limit, text.length)) + (text.length > limit ? hiddenText : '');
   }
 
- /*  static String getCreditCardNumber(String number) {
+  static String getCreditCardNumber(String number) {
     String result = '';
     if (number != null && number.isNotEmpty && number.length == 16) {
       result = number.substring(0, 4);
@@ -202,9 +192,9 @@ class Helper {
       result += ' ' + number.substring(12, 16);
     }
     return result;
-  } */
+  }
 
- /*  static String trans(String text) {
+  static String trans(String text) {
     switch (text) {
       case "App\\Notifications\\StatusChangedOrder":
         return S.current.order_status_changed;
@@ -213,5 +203,5 @@ class Helper {
       default:
         return "";
     }
-  } */
+  }
 }
