@@ -1,7 +1,9 @@
+
 import 'package:flutter/material.dart';
 //import 'package:com.cardinalscout/generated/i18n.dart';
 import 'package:com.cardinalscout/src/controllers/home_controller.dart';
 import 'package:com.cardinalscout/src/elements/BlocksCarouselWidget.dart';
+import 'package:com.cardinalscout/src/elements/CategoriesCarouselWidget.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 //import 'package:com.cardinalscout/src/repository/settings_repository.dart' as settingsRepo;
 import 'package:mvc_pattern/mvc_pattern.dart';
@@ -84,7 +86,7 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
               //Image.asset("assets/img/LogoPrueba.png", height: 10,),
               Text(" Cardinal Scout", style: TextStyle(color: Colors.black54, fontWeight: FontWeight.w600),)
             ],
-          ),
+          ),                                                  
 
             actions: [
               Container(
@@ -120,7 +122,8 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
             // Cierra Mapa inconos
             SizedBox(height: 20.0),
 
-            BlocksCarouselWidget(blocksList: _con.blocks, heroTag: 'home_blocks'),        
+            BlocksCarouselWidget(blocksList: _con.blocks, heroTag: 'home_blocks'),  
+            CategoriesCarouselWidget(categorysList: _con.categories, heroTag: 'home_categories'),        
             SizedBox(height: 20.0),
           ],
         ),

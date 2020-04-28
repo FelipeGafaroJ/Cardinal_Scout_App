@@ -90,6 +90,7 @@ class _BlockWidgetState extends StateMVC<BlockWidget> {
                                 child: Row(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
+                                    
                                     Expanded(
                                       child: Text(
                                         _con.block.name,
@@ -97,18 +98,24 @@ class _BlockWidgetState extends StateMVC<BlockWidget> {
                                         softWrap: false,
                                         maxLines: 2,
                                         style: Theme.of(context).textTheme.display2,
+                                        
+                                        
                                       ),
                                     ),
                                   ],
                                 ),
                               ),
-                              Padding(
+                              
+                              //Tipo Subtitulo
+
+                              /* Padding(
                                 padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                                 child: Html(
                                   data: _con.block.name,
                                   defaultTextStyle: Theme.of(context).textTheme.body1.merge(TextStyle(fontSize: 14)),
                                 ),
-                              ),
+                              ), */
+                              
                               //ImageThumbCarouselWidget(galleriesList: _con.galleries),
                               Padding(
                                 padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -125,13 +132,18 @@ class _BlockWidgetState extends StateMVC<BlockWidget> {
                                   ),
                                 ),
                               ),
+                             
+                             //Conteiner Descripcion 
+
                               Container(
                                 width: MediaQuery.of(context).size.width,
                                 padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                                 margin: const EdgeInsets.symmetric(vertical: 5),
                                 color: Theme.of(context).primaryColor,
-                                child: Helper.applyHtml(context, _con.block.name),
+                                child: Helper.applyHtml(context, _con.block.description),
                               ),
+
+
                               _con.activitys.isEmpty
                                   ? SizedBox(height: 0)
                                   : Padding(
@@ -140,7 +152,7 @@ class _BlockWidgetState extends StateMVC<BlockWidget> {
                                         dense: true,
                                         contentPadding: EdgeInsets.symmetric(vertical: 0),
                                         leading: Icon(
-                                          Icons.ac_unit,
+                                          Icons.format_list_bulleted,
                                           color: Theme.of(context).hintColor,
                                         ),
                                         title: Text(
