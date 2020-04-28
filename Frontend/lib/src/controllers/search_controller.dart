@@ -1,6 +1,6 @@
 
-import 'package:cardinalscout/src/repository/search_repository.dart';
-import 'package:cardinalscout/src/repository/settings_repository.dart';
+import 'package:com.cardinalscout/src/repository/search_repository.dart';
+import 'package:com.cardinalscout/src/repository/settings_repository.dart';
 import 'package:location/location.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 

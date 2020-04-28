@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:cardinalscout/generated/i18n.dart';
-import 'package:cardinalscout/src/models/user.dart';
+import 'package:com.cardinalscout/generated/i18n.dart';
+import 'package:com.cardinalscout/src/models/user.dart';
 
 class ProfileSettingsDialog extends StatefulWidget {
   User user;

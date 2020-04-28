@@ -1,4 +1,4 @@
-import 'package:cardinalscout/src/models/media.dart';
+import 'package:com.cardinalscout/src/models/media.dart';
 
 class NotificationType {
   String id;

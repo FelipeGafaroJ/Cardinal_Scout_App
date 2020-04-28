@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:cardinalscout/src/helpers/helper.dart';
-import 'package:cardinalscout/src/models/notification.dart' as model;
+import 'package:com.cardinalscout/src/helpers/helper.dart';
+import 'package:com.cardinalscout/src/models/notification.dart' as model;
 import 'package:intl/intl.dart' show DateFormat;
 
 class NotificationItemWidget extends StatelessWidget {

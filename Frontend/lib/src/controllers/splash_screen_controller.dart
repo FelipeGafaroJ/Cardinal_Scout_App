@@ -3,9 +3,9 @@ import 'dart:async';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:cardinalscout/generated/i18n.dart';
-import 'package:cardinalscout/src/repository/settings_repository.dart' as settingRepo;
-import 'package:cardinalscout/src/repository/user_repository.dart';
+import 'package:com.cardinalscout/generated/i18n.dart';
+import 'package:com.cardinalscout/src/repository/settings_repository.dart' as settingRepo;
+import 'package:com.cardinalscout/src/repository/user_repository.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 
 class SplashScreenController extends ControllerMVC {

@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:cardinalscout/src/models/user.dart';
+import 'package:com.cardinalscout/src/models/user.dart';
 
 class ProfileAvatarWidget extends StatelessWidget {
   final User user;

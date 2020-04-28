@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:cardinalscout/src/models/route_argument.dart';
-import 'package:cardinalscout/src/pages/login.dart';
-import 'package:cardinalscout/src/pages/pages.dart';
-import 'package:cardinalscout/src/pages/settings.dart';
-import 'package:cardinalscout/src/pages/signup.dart';
-import 'package:cardinalscout/src/pages/splash_screen.dart';
-import 'package:cardinalscout/src/pages/block.dart';
-import 'package:cardinalscout/src/pages/walkthrough.dart';
+import 'package:com.cardinalscout/src/models/route_argument.dart';
+import 'package:com.cardinalscout/src/pages/login.dart';
+import 'package:com.cardinalscout/src/pages/pages.dart';
+import 'package:com.cardinalscout/src/pages/settings.dart';
+import 'package:com.cardinalscout/src/pages/signup.dart';
+import 'package:com.cardinalscout/src/pages/splash_screen.dart';
+import 'package:com.cardinalscout/src/pages/block.dart';
+import 'package:com.cardinalscout/src/pages/walkthrough.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {

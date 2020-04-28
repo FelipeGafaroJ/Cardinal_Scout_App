@@ -1,5 +1,5 @@
-//import 'package:cardinalscout/src/models/media.dart';
-import 'package:cardinalscout/src/models/activity.dart';
+//import 'package:com.cardinalscout/src/models/media.dart';
+import 'package:com.cardinalscout/src/models/activity.dart';
 
 class Block {
 

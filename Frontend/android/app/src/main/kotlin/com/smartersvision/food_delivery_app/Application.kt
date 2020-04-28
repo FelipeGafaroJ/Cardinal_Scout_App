@@ -1,4 +1,4 @@
-package com.revoxservices.food
+package com.cardinalscout
 import android.os.Bundle
 
 import io.flutter.app.FlutterApplication

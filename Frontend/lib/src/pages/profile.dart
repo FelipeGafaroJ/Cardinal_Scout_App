@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:cardinalscout/generated/i18n.dart';
-import 'package:cardinalscout/src/controllers/profile_controller.dart';
-import 'package:cardinalscout/src/elements/CircularLoadingWidget.dart';
-import 'package:cardinalscout/src/elements/PermissionDeniedWidget.dart';
-import 'package:cardinalscout/src/elements/ProfileAvatarWidget.dart';
-import 'package:cardinalscout/src/repository/user_repository.dart';
+import 'package:com.cardinalscout/generated/i18n.dart';
+import 'package:com.cardinalscout/src/controllers/profile_controller.dart';
+import 'package:com.cardinalscout/src/elements/CircularLoadingWidget.dart';
+import 'package:com.cardinalscout/src/elements/PermissionDeniedWidget.dart';
+import 'package:com.cardinalscout/src/elements/ProfileAvatarWidget.dart';
+import 'package:com.cardinalscout/src/repository/user_repository.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 
 class ProfileWidget extends StatefulWidget {

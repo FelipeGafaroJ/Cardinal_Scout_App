@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:cardinalscout/generated/i18n.dart';
-import 'package:cardinalscout/src/models/user.dart';
-import 'package:cardinalscout/src/repository/user_repository.dart' as repository;
+import 'package:com.cardinalscout/generated/i18n.dart';
+import 'package:com.cardinalscout/src/models/user.dart';
+import 'package:com.cardinalscout/src/repository/user_repository.dart' as repository;
 import 'package:mvc_pattern/mvc_pattern.dart';
 
 class SettingsController extends ControllerMVC {

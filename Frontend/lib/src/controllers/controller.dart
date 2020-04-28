@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:cardinalscout/src/repository/settings_repository.dart' as settingRepo;
-import 'package:cardinalscout/src/repository/user_repository.dart' as userRepo;
+import 'package:com.cardinalscout/src/repository/settings_repository.dart' as settingRepo;
+import 'package:com.cardinalscout/src/repository/user_repository.dart' as userRepo;
 import 'package:mvc_pattern/mvc_pattern.dart';
 
 class Controller extends ControllerMVC {

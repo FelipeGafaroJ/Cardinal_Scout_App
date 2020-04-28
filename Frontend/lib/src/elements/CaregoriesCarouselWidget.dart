@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:cardinalscout/src/elements/CategoriesCarouselItemWidget.dart';
-import 'package:cardinalscout/src/elements/CircularLoadingWidget.dart';
-import 'package:cardinalscout/src/models/category.dart';
+import 'package:com.cardinalscout/src/elements/CategoriesCarouselItemWidget.dart';
+import 'package:com.cardinalscout/src/elements/CircularLoadingWidget.dart';
+import 'package:com.cardinalscout/src/models/category.dart';
 
 class CategoriesCarouselWidget extends StatelessWidget {
   List<Category> categories;

@@ -1,8 +1,8 @@
-import 'package:cardinalscout/src/models/activity.dart';
-import 'package:cardinalscout/src/models/block.dart';
-import 'package:cardinalscout/src/repository/block_repository.dart';
-import 'package:cardinalscout/src/repository/activity_repository.dart';
-//import 'package:cardinalscout/src/repository/settings_repository.dart';
+import 'package:com.cardinalscout/src/models/activity.dart';
+import 'package:com.cardinalscout/src/models/block.dart';
+import 'package:com.cardinalscout/src/repository/block_repository.dart';
+import 'package:com.cardinalscout/src/repository/activity_repository.dart';
+//import 'package:com.cardinalscout/src/repository/settings_repository.dart';
 import 'package:location/location.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 

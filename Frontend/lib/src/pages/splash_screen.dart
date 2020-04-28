@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:cardinalscout/src/controllers/splash_screen_controller.dart';
+import 'package:com.cardinalscout/src/controllers/splash_screen_controller.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 
 class SplashScreen extends StatefulWidget {

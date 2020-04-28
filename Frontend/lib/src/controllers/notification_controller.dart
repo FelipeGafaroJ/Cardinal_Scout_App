@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:cardinalscout/generated/i18n.dart';
-import 'package:cardinalscout/src/models/notification.dart' as model;
-import 'package:cardinalscout/src/repository/notification_repository.dart';
+import 'package:com.cardinalscout/generated/i18n.dart';
+import 'package:com.cardinalscout/src/models/notification.dart' as model;
+import 'package:com.cardinalscout/src/repository/notification_repository.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 
 class NotificationController extends ControllerMVC {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:cardinalscout/generated/i18n.dart';
-import 'package:cardinalscout/src/controllers/user_controller.dart';
-import 'package:cardinalscout/src/elements/BlockButtonWidget.dart';
-import 'package:cardinalscout/src/helpers/app_config.dart' as config;
+import 'package:com.cardinalscout/generated/i18n.dart';
+import 'package:com.cardinalscout/src/controllers/user_controller.dart';
+import 'package:com.cardinalscout/src/elements/BlockButtonWidget.dart';
+import 'package:com.cardinalscout/src/helpers/app_config.dart' as config;
 import 'package:mvc_pattern/mvc_pattern.dart';
 
 class SignUpWidget extends StatefulWidget {

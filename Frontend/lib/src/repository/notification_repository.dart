@@ -1,10 +1,10 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:cardinalscout/src/helpers/helper.dart';
-import 'package:cardinalscout/src/models/notification.dart';
-import 'package:cardinalscout/src/models/user.dart';
-import 'package:cardinalscout/src/repository/user_repository.dart' as userRepo;
+import 'package:com.cardinalscout/src/helpers/helper.dart';
+import 'package:com.cardinalscout/src/models/notification.dart';
+import 'package:com.cardinalscout/src/models/user.dart';
+import 'package:com.cardinalscout/src/repository/user_repository.dart' as userRepo;
 import 'package:global_configuration/global_configuration.dart';
 import 'package:http/http.dart' as http;
 

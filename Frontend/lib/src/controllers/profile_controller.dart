@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:cardinalscout/generated/i18n.dart';
+import 'package:com.cardinalscout/generated/i18n.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 
 class ProfileController extends ControllerMVC {

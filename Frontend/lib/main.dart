@@ -3,12 +3,12 @@ import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_analytics/observer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:cardinalscout/generated/i18n.dart';
-import 'package:cardinalscout/route_generator.dart';
-import 'package:cardinalscout/src/controllers/controller.dart';
-import 'package:cardinalscout/src/helpers/app_config.dart' as config;
-import 'package:cardinalscout/src/models/setting.dart';
-import 'package:cardinalscout/src/repository/settings_repository.dart' as settingRepo;
+import 'package:com.cardinalscout/generated/i18n.dart';
+import 'package:com.cardinalscout/route_generator.dart';
+import 'package:com.cardinalscout/src/controllers/controller.dart';
+import 'package:com.cardinalscout/src/helpers/app_config.dart' as config;
+import 'package:com.cardinalscout/src/models/setting.dart';
+import 'package:com.cardinalscout/src/repository/settings_repository.dart' as settingRepo;
 import 'package:global_configuration/global_configuration.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 

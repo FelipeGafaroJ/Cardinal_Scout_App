@@ -1,7 +1,7 @@
 /*import 'package:flutter/material.dart';
-import 'package:cardinalscout/src/elements/CircularLoadingWidget.dart';
-import 'package:cardinalscout/src/models/restaurant.dart';
-import 'package:cardinalscout/src/models/route_argument.dart';
+import 'package:com.cardinalscout/src/elements/CircularLoadingWidget.dart';
+import 'package:com.cardinalscout/src/models/restaurant.dart';
+import 'package:com.cardinalscout/src/models/route_argument.dart';
 
 import 'CardWidget.dart';
 

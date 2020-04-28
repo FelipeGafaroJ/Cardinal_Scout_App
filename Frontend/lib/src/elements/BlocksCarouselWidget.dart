@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:cardinalscout/src/elements/CircularLoadingWidget.dart';
-import 'package:cardinalscout/src/models/block.dart';
-import 'package:cardinalscout/src/models/route_argument.dart';
+import 'package:com.cardinalscout/src/elements/CircularLoadingWidget.dart';
+import 'package:com.cardinalscout/src/models/block.dart';
+import 'package:com.cardinalscout/src/models/route_argument.dart';
 
 import 'BlockWidget.dart';
 

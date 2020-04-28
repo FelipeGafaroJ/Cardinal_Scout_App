@@ -1,9 +1,9 @@
 import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:cardinalscout/generated/i18n.dart';
-import 'package:cardinalscout/src/controllers/profile_controller.dart';
-import 'package:cardinalscout/src/repository/settings_repository.dart';
-import 'package:cardinalscout/src/repository/user_repository.dart';
+import 'package:com.cardinalscout/generated/i18n.dart';
+import 'package:com.cardinalscout/src/controllers/profile_controller.dart';
+import 'package:com.cardinalscout/src/repository/settings_repository.dart';
+import 'package:com.cardinalscout/src/repository/user_repository.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 
 class DrawerWidget extends StatefulWidget {

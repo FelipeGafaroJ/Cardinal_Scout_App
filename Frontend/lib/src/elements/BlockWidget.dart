@@ -1,9 +1,9 @@
 //import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:cardinalscout/src/helpers/helper.dart';
-import 'package:cardinalscout/src/models/block.dart';
+import 'package:com.cardinalscout/src/helpers/helper.dart';
+import 'package:com.cardinalscout/src/models/block.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-//import 'package:cardinalscout/src/models/route_argument.dart';
+//import 'package:com.cardinalscout/src/models/route_argument.dart';
 
 class BlockWidget extends StatelessWidget {
 

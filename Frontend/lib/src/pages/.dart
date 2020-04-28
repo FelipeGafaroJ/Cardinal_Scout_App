@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-//import 'package:cardinalscout/generated/i18n.dart';
-import 'package:cardinalscout/src/controllers/home_controller.dart';
-import 'package:cardinalscout/src/elements/BlocksCarouselWidget.dart';
-//import 'package:cardinalscout/src/repository/settings_repository.dart' as settingsRepo;
+//import 'package:com.cardinalscout/generated/i18n.dart';
+import 'package:com.cardinalscout/src/controllers/home_controller.dart';
+import 'package:com.cardinalscout/src/elements/BlocksCarouselWidget.dart';
+//import 'package:com.cardinalscout/src/repository/settings_repository.dart' as settingsRepo;
 import 'package:mvc_pattern/mvc_pattern.dart';
 
 class HomeWidget extends StatefulWidget {

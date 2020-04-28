@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:cardinalscout/generated/i18n.dart';
-import 'package:cardinalscout/src/helpers/app_config.dart' as config;
+import 'package:com.cardinalscout/generated/i18n.dart';
+import 'package:com.cardinalscout/src/helpers/app_config.dart' as config;
 
 class EmptyCartWidget extends StatefulWidget {
   EmptyCartWidget({

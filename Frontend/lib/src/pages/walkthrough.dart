@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:cardinalscout/generated/i18n.dart';
-import 'package:cardinalscout/src/controllers/walkthrough_controller.dart';
-import 'package:cardinalscout/src/helpers/app_config.dart' as config;
+import 'package:com.cardinalscout/generated/i18n.dart';
+import 'package:com.cardinalscout/src/controllers/walkthrough_controller.dart';
+import 'package:com.cardinalscout/src/helpers/app_config.dart' as config;
 import 'package:mvc_pattern/mvc_pattern.dart';
 
 class Walkthrough extends StatelessWidget {

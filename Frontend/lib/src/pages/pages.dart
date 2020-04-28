@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:cardinalscout/src/pages/home.dart';
-import 'package:cardinalscout/src/pages/notifications.dart';
-import 'package:cardinalscout/src/pages/profile.dart';
+import 'package:com.cardinalscout/src/pages/home.dart';
+import 'package:com.cardinalscout/src/pages/notifications.dart';
+import 'package:com.cardinalscout/src/pages/profile.dart';
 
 // ignore: must_be_immutable
 class PagesTestWidget extends StatefulWidget {

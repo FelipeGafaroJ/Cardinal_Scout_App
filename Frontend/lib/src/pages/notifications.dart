@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:cardinalscout/generated/i18n.dart';
-import 'package:cardinalscout/src/controllers/notification_controller.dart';
-import 'package:cardinalscout/src/elements/EmptyNotificationsWidget.dart';
-import 'package:cardinalscout/src/elements/NotificationItemWidget.dart';
-import 'package:cardinalscout/src/elements/PermissionDeniedWidget.dart';
-import 'package:cardinalscout/src/repository/user_repository.dart';
+import 'package:com.cardinalscout/generated/i18n.dart';
+import 'package:com.cardinalscout/src/controllers/notification_controller.dart';
+import 'package:com.cardinalscout/src/elements/EmptyNotificationsWidget.dart';
+import 'package:com.cardinalscout/src/elements/NotificationItemWidget.dart';
+import 'package:com.cardinalscout/src/elements/PermissionDeniedWidget.dart';
+import 'package:com.cardinalscout/src/repository/user_repository.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 
 class NotificationsWidget extends StatefulWidget {

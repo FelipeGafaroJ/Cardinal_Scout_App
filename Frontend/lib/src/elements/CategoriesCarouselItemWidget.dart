@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:cardinalscout/src/models/category.dart';
-import 'package:cardinalscout/src/models/route_argument.dart';
+import 'package:com.cardinalscout/src/models/category.dart';
+import 'package:com.cardinalscout/src/models/route_argument.dart';
 
 // ignore: must_be_immutable
 class CategoriesCarouselItemWidget extends StatelessWidget {

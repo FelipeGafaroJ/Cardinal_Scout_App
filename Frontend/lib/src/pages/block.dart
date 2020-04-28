@@ -2,12 +2,12 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_html/flutter_html.dart';
-import 'package:cardinalscout/generated/i18n.dart';
-import 'package:cardinalscout/src/controllers/block_controller.dart';
-import 'package:cardinalscout/src/elements/CircularLoadingWidget.dart';
-import 'package:cardinalscout/src/elements/ActivityItemWidget.dart';
-import 'package:cardinalscout/src/helpers/helper.dart';
-import 'package:cardinalscout/src/models/route_argument.dart';
+import 'package:com.cardinalscout/generated/i18n.dart';
+import 'package:com.cardinalscout/src/controllers/block_controller.dart';
+import 'package:com.cardinalscout/src/elements/CircularLoadingWidget.dart';
+import 'package:com.cardinalscout/src/elements/ActivityItemWidget.dart';
+import 'package:com.cardinalscout/src/helpers/helper.dart';
+import 'package:com.cardinalscout/src/models/route_argument.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 
 class BlockWidget extends StatefulWidget {

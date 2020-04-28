@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:cardinalscout/src/helpers/helper.dart';
-import 'package:cardinalscout/src/models/category.dart';
+import 'package:com.cardinalscout/src/helpers/helper.dart';
+import 'package:com.cardinalscout/src/models/category.dart';
 import 'package:global_configuration/global_configuration.dart';
 import 'package:http/http.dart' as http;
 

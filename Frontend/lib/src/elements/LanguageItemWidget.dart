@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:cardinalscout/src/models/language.dart';
-import 'package:cardinalscout/src/repository/settings_repository.dart' as settingRepo;
+import 'package:com.cardinalscout/src/models/language.dart';
+import 'package:com.cardinalscout/src/repository/settings_repository.dart' as settingRepo;
 
 class LanguageItemWidget extends StatefulWidget {
   final Language language;

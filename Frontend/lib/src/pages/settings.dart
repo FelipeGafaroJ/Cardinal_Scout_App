@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:cardinalscout/generated/i18n.dart';
-import 'package:cardinalscout/src/controllers/settings_controller.dart';
-import 'package:cardinalscout/src/elements/CircularLoadingWidget.dart';
-import 'package:cardinalscout/src/elements/ProfileSettingsDialog.dart';
-import 'package:cardinalscout/src/helpers/helper.dart';
-import 'package:cardinalscout/src/repository/user_repository.dart';
+import 'package:com.cardinalscout/generated/i18n.dart';
+import 'package:com.cardinalscout/src/controllers/settings_controller.dart';
+import 'package:com.cardinalscout/src/elements/CircularLoadingWidget.dart';
+import 'package:com.cardinalscout/src/elements/ProfileSettingsDialog.dart';
+import 'package:com.cardinalscout/src/helpers/helper.dart';
+import 'package:com.cardinalscout/src/repository/user_repository.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 
 class SettingsWidget extends StatefulWidget {

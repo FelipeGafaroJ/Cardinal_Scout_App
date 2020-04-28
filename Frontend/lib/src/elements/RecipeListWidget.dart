@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:cardinalscout/src/elements/RecipeListItemWidget.dart';
+import 'package:com.cardinalscout/src/elements/RecipeListItemWidget.dart';
 
 class RecipeListWidget extends StatelessWidget {
   @override
