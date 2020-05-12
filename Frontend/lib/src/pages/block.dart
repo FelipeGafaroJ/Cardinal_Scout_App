@@ -72,7 +72,7 @@ class _BlockWidgetState extends StateMVC<BlockWidget> {
                               tag: widget.routeArgument.heroTag + _con.block.id,
                               child: CachedNetworkImage(
                                 fit: BoxFit.cover,
-                                imageUrl: 'https://3.bp.blogspot.com/-kkeYcP_AEwQ/Wu3KCtVcapI/AAAAAAAAC0E/wqhezwII_zwwMQfgHcULC905d8g3DFuxACLcBGAs/s1600/Vig%25C3%25ADa.png',
+                                imageUrl: 'http://billing.revoxservices.com/blocks/'+_con.block.id+'.png',
                                 placeholder: (context, url) => Image.asset(
                                   'assets/img/loading.gif',
                                   fit: BoxFit.cover,
@@ -123,8 +123,8 @@ class _BlockWidgetState extends StateMVC<BlockWidget> {
                                   dense: true,
                                   contentPadding: EdgeInsets.symmetric(vertical: 0),
                                   leading: Icon(
-                                    Icons.stars,
-                                    color: Theme.of(context).hintColor,
+                                    Icons.perm_device_information,
+                                    color: Theme.of(context).accentColor,
                                   ),
                                   title: Text(
                                     S.of(context).information,
@@ -153,13 +153,13 @@ class _BlockWidgetState extends StateMVC<BlockWidget> {
                                         contentPadding: EdgeInsets.symmetric(vertical: 0),
                                         leading: Icon(
                                           Icons.format_list_bulleted,
-                                          color: Theme.of(context).hintColor,
+                                          color: Theme.of(context).accentColor,
                                         ),
-                                        title: Text(
+                                       /*  title: Text(
                                           //S.of(context).featured_foods,
                                           'Listado de Actividades',
                                           style: Theme.of(context).textTheme.display1,
-                                        ),
+                                        ), */
                                       ),
                                     ),
                               _con.activitys.isEmpty
@@ -184,7 +184,6 @@ class _BlockWidgetState extends StateMVC<BlockWidget> {
                                             ),
                                           ],
                                         )
-
                                         );
                                         
                                         return ActivityItemWidget(

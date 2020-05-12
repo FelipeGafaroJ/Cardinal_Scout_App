@@ -35,7 +35,7 @@ class _DrawerWidgetState extends StateMVC<DrawerWidget> {
                       color: Theme.of(context).hintColor.withOpacity(0.1),
                     ),
                     accountName: Text(
-                      currentUser.value.name,
+                      currentUser.value.username,
                       style: Theme.of(context).textTheme.title,
                     ),
                     accountEmail: Text(
@@ -44,7 +44,6 @@ class _DrawerWidgetState extends StateMVC<DrawerWidget> {
                     ),
                     currentAccountPicture: CircleAvatar(
                       backgroundColor: Theme.of(context).accentColor,
-                      backgroundImage: NetworkImage(currentUser.value.image.thumb),
                     ),
                   )
                 : Container(

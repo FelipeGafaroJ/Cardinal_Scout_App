@@ -42,13 +42,11 @@ class _LoginWidgetState extends StateMVC<LoginWidget> {
             ),
           ),
           Positioned(
-            
             top: config.App(context).appHeight(37) - 120,
             child: Container(
               width: config.App(context).appWidth(84),
               height: config.App(context).appHeight(37),
               child: Text(
-                /// ACA VA EL MENSAJE de inicio
                 S.of(context).lets_start_with_login,
                 style: Theme.of(context).textTheme.display3.merge(TextStyle(color: Theme.of(context).primaryColor)),
               ),
@@ -86,7 +84,7 @@ class _LoginWidgetState extends StateMVC<LoginWidget> {
                         labelText: S.of(context).email,
                         labelStyle: TextStyle(color: Theme.of(context).accentColor),
                         contentPadding: EdgeInsets.all(12),
-                        hintText: 'cardinal@gmail.com',
+                        hintText: 'info@cardinal.com',
                         hintStyle: TextStyle(color: Theme.of(context).focusColor.withOpacity(0.7)),
                         prefixIcon: Icon(Icons.mail_outline, color: Theme.of(context).accentColor),
                         border: OutlineInputBorder(
@@ -154,12 +152,10 @@ class _LoginWidgetState extends StateMVC<LoginWidget> {
               ),
             ),
           ),
-          Positioned(
-            
+         /*  Positioned(
             bottom: 10,
             child: Column(
-              
-             /*  children: <Widget>[
+              children: <Widget>[
                 FlatButton(
                   onPressed: () {
                     Navigator.of(context).pushReplacementNamed('/ForgetPassword');
@@ -174,11 +170,9 @@ class _LoginWidgetState extends StateMVC<LoginWidget> {
                   textColor: Theme.of(context).hintColor,
                   child: Text(S.of(context).i_dont_have_an_account),
                 ),
-              ], */
-
-              
+              ],
             ),
-          )
+          ) */
         ],
       ),
     );

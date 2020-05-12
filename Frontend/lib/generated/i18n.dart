@@ -2019,7 +2019,7 @@ class $es extends S {
   @override
   String get application_preferences => "Preferencias de aplicación";
   @override
-  String get lets_start_with_login => "¡Bienvenidos a Cardinal!";
+  String get lets_start_with_login => "¡¡¡Bienvenidos a Cardinal!!!";
   @override
   String get verify_your_internet_connection => "Verifica tu conexión a internet";
   @override

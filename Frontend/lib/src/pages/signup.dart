@@ -71,7 +71,7 @@ class _SignUpWidgetState extends StateMVC<SignUpWidget> {
                     children: <Widget>[
                       TextFormField(
                         keyboardType: TextInputType.text,
-                        onSaved: (input) => _con.user.name = input,
+                        onSaved: (input) => _con.user.username = input,
                         validator: (input) => input.length < 3 ? S.of(context).should_be_more_than_3_letters : null,
                         decoration: InputDecoration(
                           labelText: S.of(context).full_name,

@@ -2,7 +2,9 @@ import 'package:com.cardinalscout/src/models/media.dart';
 
 class User {
   String id;
-  String name;
+  String username;
+  String firstname;
+  String lastname;
   String email;
   String password;
   String apiToken;
@@ -10,7 +12,6 @@ class User {
   String phone;
   String address;
   String bio;
-  Media image;
 
   // used for indicate if client logged in or not
   bool auth;
@@ -21,42 +22,39 @@ class User {
 
   User.fromJSON(Map<String, dynamic> jsonMap) {
     id = jsonMap['id'].toString();
-    name = jsonMap['name'];
+    username = jsonMap['username'];
+    firstname = jsonMap['firstname'];
+    lastname = jsonMap['lastname'];
     email = jsonMap['email'];
     apiToken = jsonMap['api_token'];
     deviceToken = jsonMap['device_token'];
+
     try {
       phone = jsonMap['custom_fields']['phone']['view'];
     } catch (e) {
       phone = "";
     }
+
     try {
       address = jsonMap['custom_fields']['address']['view'];
     } catch (e) {
       address = "";
     }
-    try {
-      bio = jsonMap['custom_fields']['bio']['view'];
-    } catch (e) {
-      bio = "";
-    }
-    image = jsonMap['media'] != null && (jsonMap['media'] as List).length > 0
-        ? Media.fromJSON(jsonMap['media'][0])
-        : new Media();
+
   }
 
   Map toMap() {
     var map = new Map<String, dynamic>();
     map["id"] = id;
     map["email"] = email;
-    map["name"] = name;
+    map["username"] = username;
+    map["firstname"] = firstname;
+    map["lastname"] = lastname;
     map["password"] = password;
     map["api_token"] = apiToken;
     map["device_token"] = deviceToken;
     map["phone"] = phone;
     map["address"] = address;
-    map["bio"] = bio;
-    map["media"] = image?.toMap();
     return map;
   }
 

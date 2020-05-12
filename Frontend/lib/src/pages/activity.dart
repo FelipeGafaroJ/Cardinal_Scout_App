@@ -70,7 +70,7 @@ class _ActivityWidgetState extends StateMVC<ActivityWidget> {
                               tag: widget.routeArgument.heroTag + _con.activity.id,
                               child: CachedNetworkImage(
                                 fit: BoxFit.cover,
-                                imageUrl: 'https://image.freepik.com/vector-gratis/camping-aventura-bosque-paisaje-nocturno_18591-52021.jpg',
+                                imageUrl: 'http://billing.revoxservices.com/activitys/'+_con.activity.id+'.png',
                                 placeholder: (context, url) => Image.asset(
                                   'assets/img/loading.gif',
                                   fit: BoxFit.cover,
@@ -139,32 +139,8 @@ class _ActivityWidgetState extends StateMVC<ActivityWidget> {
                                 margin: const EdgeInsets.symmetric(vertical: 5),
                                 color: Theme.of(context).primaryColor,
                                 child: Helper.applyHtml(context, _con.activity.description),
-                                
-                                
                               ),
 
-        RaisedButton(
-          
-          onPressed: () {},
-          textColor: Colors.white,
-          padding: const EdgeInsets.all(0.0),
-          child: Container(
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                colors: <Color>[
-                  Color(0xFF00C9DE),
-                  Color(0xFF00C9DE),
-                  Color(0xFF42A5F5),
-                ],
-              ),
-            ),
-            padding: const EdgeInsets.all(10.0),
-            child: const Text(
-              'Solicitar',
-              style: TextStyle(fontSize: 20)
-            ),
-          ),
-        ),
 
                               SizedBox(height: 100),
                             ],

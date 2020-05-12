@@ -73,7 +73,8 @@ class _CategoryWidgetState extends StateMVC<CategoryWidget> {
                               tag: widget.routeArgument.heroTag + _con.category.id,
                               child: CachedNetworkImage(
                                 fit: BoxFit.cover,
-                                imageUrl: 'https://3.bp.blogspot.com/-kkeYcP_AEwQ/Wu3KCtVcapI/AAAAAAAAC0E/wqhezwII_zwwMQfgHcULC905d8g3DFuxACLcBGAs/s1600/Vig%25C3%25ADa.png',
+                                
+                                imageUrl: 'http://billing.revoxservices.com/categories/'+_con.category.id+'.png',
                                 placeholder: (context, url) => Image.asset(
                                   'assets/img/loading.gif',
                                   fit: BoxFit.cover,

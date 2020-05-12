@@ -5,8 +5,7 @@ import 'package:com.cardinalscout/src/repository/user_repository.dart' as reposi
 import 'package:mvc_pattern/mvc_pattern.dart';
 
 class SettingsController extends ControllerMVC {
-  /*
-  CreditCard creditCard = new CreditCard();
+  
   GlobalKey<FormState> loginFormKey;
   GlobalKey<ScaffoldState> scaffoldKey;
 
@@ -26,21 +25,10 @@ class SettingsController extends ControllerMVC {
     });
   }
 
-  void updateCreditCard(CreditCard creditCard) {
-    repository.setCreditCard(creditCard).then((value) {
-      setState(() {});
-      scaffoldKey.currentState.showSnackBar(SnackBar(
-        content: Text(S.current.payment_settings_updated_successfully),
-      ));
-    });
-  }
-
   void listenForUser() async {
-    creditCard = await repository.getCreditCard();
     setState(() {});
   }
 
   Future<void> refreshSettings() async {
-    creditCard = new CreditCard();
-  }*/
+  }
 }

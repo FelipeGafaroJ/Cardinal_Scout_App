@@ -6,6 +6,7 @@ class Activity {
   Media image;
   String name;
   String slug;
+  String indicted;
   //bool status;
   //bool pritority;
   String type;
@@ -20,6 +21,7 @@ class Activity {
     name = jsonMap['name'].toString();
     //image = jsonMap['media'] != null ? Media.fromJSON(jsonMap['media'][0]) : null;
     slug = jsonMap['slug'].toString();
+    indicted = jsonMap['indicted'].toString();
     //status = jsonMap['status'];
     //pritority = jsonMap['pritority'];
     //type = jsonMap['type'];
@@ -28,10 +30,13 @@ class Activity {
     //category = jsonMap['category_id'];
   }
 
+
+
   Map<String, dynamic> toMap() {
     return {
       'id': id,
       'name': name,
+      'indicted': indicted,
       //'image': image,
       'slug': slug,
       //'status': status,

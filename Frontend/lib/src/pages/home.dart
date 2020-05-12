@@ -14,8 +14,8 @@ class HomeWidget extends StatefulWidget {
 
   HomeWidget({Key key, this.parentScaffoldKey}) : super(key: key);
   @override
-  _HomeWidgetState createState() => _HomeWidgetState();
-}
+    _HomeWidgetState createState() => _HomeWidgetState();
+  }
 
 class _HomeWidgetState extends StateMVC<HomeWidget> {
 
@@ -82,7 +82,7 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
             mainAxisAlignment: MainAxisAlignment.center,
             
             children: [
-               /*  Icon(Icons.more_vert,
+             /*    Icon(Icons.more_vert,
                 color: Colors.white,
                 size: 24.0,
 
@@ -91,7 +91,7 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
               Image.network('https://i.ibb.co/wBNytqK/Logo-Prueba.png', height: 30,),
              // imageUrl: 'https://3.bp.blogspot.com/-kkeYcP_AEwQ/Wu3KCtVcapI/AAAAAAAAC0E/wqhezwII_zwwMQfgHcULC905d8g3DFuxACLcBGAs/s1600/Vig%25C3%25ADa.png',
               //Image.asset("assets/img/LogoPrueba.png", height: 10,),
-              Text(" Cardinal Scout", style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),)
+             Text(" Cardinal Scout", style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),)
               
               
             ],

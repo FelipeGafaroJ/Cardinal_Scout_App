@@ -59,5 +59,4 @@ Future<Stream<Category>> getCategoriesUser() async {
       return Category.fromJSON(data);
     });
 
-
 }

@@ -28,7 +28,7 @@ class UserController extends ControllerMVC {
         print(value.apiToken);
         if (value != null && value.apiToken != null) {
           scaffoldKey.currentState.showSnackBar(SnackBar(
-            content: Text(S.current.welcome + value.name),
+            content: Text(S.current.welcome + value.username),
           ));
           Navigator.of(scaffoldKey.currentContext).pushReplacementNamed('/Home', arguments: 2);
           print("paso por aca home");
@@ -47,7 +47,7 @@ class UserController extends ControllerMVC {
       repository.register(user).then((value) {
         if (value != null && value.apiToken != null) {
           scaffoldKey.currentState.showSnackBar(SnackBar(
-            content: Text(S.current.welcome + value.name),
+            content: Text(S.current.welcome + value.username),
           ));
           Navigator.of(scaffoldKey.currentContext).pushReplacementNamed('/Pages', arguments: 2);
         } else {

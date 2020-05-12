@@ -15,7 +15,7 @@ class ProfileAvatarWidget extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 30),
       decoration: BoxDecoration(
         color: Theme.of(context).accentColor,
-        borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30), bottomRight: Radius.circular(30)),
+        borderRadius: BorderRadius.only(bottomLeft: Radius.circular(0), bottomRight: Radius.circular(0)),
       ),
       child: Column(
         children: <Widget>[
@@ -42,14 +42,14 @@ class ProfileAvatarWidget extends StatelessWidget {
                     height: 135,
                     width: 135,
                     fit: BoxFit.cover,
-                    imageUrl: user.image?.url,
+                    imageUrl: 'assets/img/loading.gif',
                     placeholder: (context, url) => Image.asset(
                       'assets/img/loading.gif',
                       fit: BoxFit.cover,
                       height: 135,
                       width: 135,
                     ),
-                    errorWidget: (context, url, error) => Icon(Icons.error),
+                    errorWidget: (context, url, error) => Icon(Icons.person_pin),
                   ),
                 ),
 //              SizedBox(
@@ -66,13 +66,13 @@ class ProfileAvatarWidget extends StatelessWidget {
               ],
             ),
           ),
-          Text(
-            user.name,
-            style: Theme.of(context).textTheme.headline.merge(TextStyle(color: Theme.of(context).primaryColor)),
+          Text('Guía de patrulla'
+            /* user.username,
+            style: Theme.of(context).textTheme.headline.merge(TextStyle(color: Theme.of(context).primaryColor)), */
           ),
-          Text(
-            user.address,
-            style: Theme.of(context).textTheme.caption.merge(TextStyle(color: Theme.of(context).primaryColor)),
+          Text('Felipe Gafaro', style: TextStyle(fontWeight: FontWeight.bold)
+            /* user.firstname + " " + user.lastname,
+            style: Theme.of(context).textTheme.caption.merge(TextStyle(color: Theme.of(context).primaryColor)), */
           ),
         ],
       ),

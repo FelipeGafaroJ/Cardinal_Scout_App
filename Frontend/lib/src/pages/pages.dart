@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:com.cardinalscout/src/pages/home.dart';
 import 'package:com.cardinalscout/src/pages/notifications.dart';
 import 'package:com.cardinalscout/src/pages/profile.dart';
+import 'package:com.cardinalscout/src/pages/compass.dart';
+import 'package:com.cardinalscout/src/pages/activitys.dart';
+
 
 // ignore: must_be_immutable
 class PagesTestWidget extends StatefulWidget {
@@ -50,10 +53,10 @@ class _PagesTestWidgetState extends State<PagesTestWidget> {
           widget.currentPage = HomeWidget(parentScaffoldKey: widget.scaffoldKey);
           break;
         case 3:
-         // widget.currentPage = OrdersWidget(parentScaffoldKey: widget.scaffoldKey);
+          widget.currentPage = ActivitysWidget(parentScaffoldKey: widget.scaffoldKey);
           break;
         case 4:
-          //widget.currentPage = FavoritesWidget(parentScaffoldKey: widget.scaffoldKey);
+          widget.currentPage = CompassWidget(parentScaffoldKey: widget.scaffoldKey);
           break;
       }
     });
@@ -88,7 +91,7 @@ class _PagesTestWidgetState extends State<PagesTestWidget> {
               title: new Container(height: 0.0),
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.format_list_bulleted),
+              icon: Icon(Icons.person_outline),
               title: new Container(height: 0.0),
             ),
             BottomNavigationBarItem(
@@ -111,7 +114,7 @@ class _PagesTestWidgetState extends State<PagesTestWidget> {
                   child: new Icon(Icons.bubble_chart, color: Theme.of(context).primaryColor),
                 )),
             BottomNavigationBarItem(
-              icon: new Icon(Icons.person_outline),
+              icon: new Icon(Icons.format_list_bulleted),
               title: new Container(height: 0.0),
             ),
             BottomNavigationBarItem(

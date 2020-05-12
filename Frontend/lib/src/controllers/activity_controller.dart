@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 class ActivityController extends ControllerMVC {
 
   Activity activity;
-
+  List<Activity> activitys = <Activity>[];
   GlobalKey<ScaffoldState> scaffoldKey;
 
   ActivityController() {
@@ -34,11 +34,32 @@ class ActivityController extends ControllerMVC {
     });
   }
   
+  
+  void listenForActivitysUser() async {
+
+    final Stream<Activity> stream = await getActivitysOfUser();
+    
+    stream.listen((Activity _activity) {
+      setState(() => activitys.add(_activity));
+    }, onError: (a) {
+      print(a);
+    }, onDone: () {});
+
+
+  }
+  
+
   Future<void> refreshActivity() async {
     var _id = activity.id;
     activity = new Activity();
     listenForActivity(id: _id, message: S.current.activity_refreshed_successfuly);
     
+  }
+
+  
+  Future<void> refreshActivitys() async {
+    activitys = <Activity>[];
+    listenForActivitysUser();    
   }
 
 

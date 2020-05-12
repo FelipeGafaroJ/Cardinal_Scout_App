@@ -16,6 +16,7 @@ class CategorieWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 292,
+     
       margin: EdgeInsets.only(left: 20, right: 20, top: 15, bottom: 20),
       decoration: BoxDecoration(
         color: Theme.of(context).primaryColor,
@@ -37,7 +38,7 @@ class CategorieWidget extends StatelessWidget {
               child: CachedNetworkImage(
                 height: 150,
                 fit: BoxFit.cover,
-                imageUrl: 'https://i.ibb.co/GnvsMZs/Corporalidad.png',
+                imageUrl: 'http://billing.revoxservices.com/categories/'+category.id+'.png',
                 placeholder: (context, url) => Image.asset(
                   'assets/img/loading.gif',
                   fit: BoxFit.cover,
@@ -64,6 +65,13 @@ class CategorieWidget extends StatelessWidget {
                         overflow: TextOverflow.fade,
                         softWrap: false,
                         style: Theme.of(context).textTheme.subhead,
+                        
+                      ),
+                      Text('Tener éxito en la vida a cualquier nivel: profesional, personal, social, familiar… no está determinado por el nivel del CI, sino por otras habilidades que definen a la Inteligencia Emocional.',
+                       //Helper.skipHtml(category.description),
+                        overflow: TextOverflow.fade,
+                        softWrap: true,
+                        style: Theme.of(context).textTheme.caption,
                       ),
                       SizedBox(height: 20),                      
                     ],

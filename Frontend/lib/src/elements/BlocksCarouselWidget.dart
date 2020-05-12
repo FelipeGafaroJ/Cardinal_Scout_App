@@ -28,7 +28,7 @@ class _BlocksCarouselWidgetState extends State<BlocksCarouselWidget> {
     return widget.blocksList.isEmpty
         ? CircularLoadingWidget(height: 288)
         : Container(
-            height: 350, //Tamaño contenedor 
+            height: 340, //Tamaño contenedor 
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: widget.blocksList.length,
