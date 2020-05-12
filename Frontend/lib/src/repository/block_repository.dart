@@ -4,8 +4,8 @@ import 'dart:io';
 import 'package:com.cardinalscout/src/helpers/helper.dart';
 import 'package:com.cardinalscout/src/models/block.dart';
 import 'package:com.cardinalscout/src/models/activity.dart';
-//import 'package:com.cardinalscout/src/repository/user_repository.dart' as userRepo;
-//import 'package:global_configuration/global_configuration.dart';
+//import 'package:cardinalscout/src/repository/user_repository.dart' as userRepo;
+import 'package:global_configuration/global_configuration.dart';
 import 'package:http/http.dart' as http;
 
 
@@ -30,8 +30,7 @@ Future<Stream<Block>> getBlocks() async {
 
 Future<Stream<Block>> getBlock(String id) async {
 
-  //final String url = 'http://billing.revoxservices.com/api/blocks/$id';  
-  final String url ='http://billing.revoxservices.com/api/blocks/$id?with=activities';
+  final String url = 'http://billing.revoxservices.com/api/blocks/$id';  
 
   final client = new http.Client();
   final streamedRest = await client.send(http.Request('get', Uri.parse(url)));
@@ -42,7 +41,6 @@ Future<Stream<Block>> getBlock(String id) async {
       .transform(json.decoder)
       .map((data) => Helper.getData(data))
       .map((data) {
-    print(Block.fromJSON(data).toMap());
     return Block.fromJSON(data);
   });
 

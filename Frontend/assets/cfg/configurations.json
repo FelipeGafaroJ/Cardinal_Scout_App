@@ -1,5 +1,5 @@
 {
-  "base_url": "https://multi-restaurants.smartersvision.com/",
-  "api_base_url": "https://multi-restaurants.smartersvision.com/api/",
+  "base_url": "http://192.168.1.3/",
+  "api_base_url": "http://billing.revoxservices.com/api/",
   "google_maps_key" : "AIzaSyB1F-b6QOA8S-rKf3niLrUcY71cGGVdiZ4"
 }

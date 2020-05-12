@@ -88,7 +88,7 @@ class _PagesTestWidgetState extends State<PagesTestWidget> {
               title: new Container(height: 0.0),
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.person),
+              icon: Icon(Icons.format_list_bulleted),
               title: new Container(height: 0.0),
             ),
             BottomNavigationBarItem(
@@ -111,11 +111,11 @@ class _PagesTestWidgetState extends State<PagesTestWidget> {
                   child: new Icon(Icons.bubble_chart, color: Theme.of(context).primaryColor),
                 )),
             BottomNavigationBarItem(
-              icon: new Icon(Icons.calendar_today),
+              icon: new Icon(Icons.person_outline),
               title: new Container(height: 0.0),
             ),
             BottomNavigationBarItem(
-              icon: new Icon(Icons.apps),
+              icon: new Icon(Icons.explore),
               title: new Container(height: 0.0),
             ),
           ],

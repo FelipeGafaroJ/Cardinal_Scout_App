@@ -80,20 +80,29 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
 
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
+            
             children: [
+               /*  Icon(Icons.more_vert,
+                color: Colors.white,
+                size: 24.0,
+
+              ), */
+              
               Image.network('https://i.ibb.co/wBNytqK/Logo-Prueba.png', height: 30,),
              // imageUrl: 'https://3.bp.blogspot.com/-kkeYcP_AEwQ/Wu3KCtVcapI/AAAAAAAAC0E/wqhezwII_zwwMQfgHcULC905d8g3DFuxACLcBGAs/s1600/Vig%25C3%25ADa.png',
               //Image.asset("assets/img/LogoPrueba.png", height: 10,),
-              Text(" Cardinal Scout", style: TextStyle(color: Colors.black54, fontWeight: FontWeight.w600),)
+              Text(" Cardinal Scout", style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),)
+              
+              
             ],
           ),                                                  
 
             actions: [
               Container(
                 padding: EdgeInsets.symmetric(horizontal:16),
-                child: Icon(
+                /* child: Icon(
                   Icons.more_vert,color: Colors.white,               
-                ),
+                ), */
               )
             ],
 
@@ -109,7 +118,7 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
 
             // Mapa de iconos
 
-              Row(
+             /*  Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: _icons
                   .asMap()
@@ -119,7 +128,8 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
                   )
                   .toList(),
             ),
-            // Cierra Mapa inconos
+            // Cierra Mapa inconos */
+            
             SizedBox(height: 20.0),
 
             BlocksCarouselWidget(blocksList: _con.blocks, heroTag: 'home_blocks'),  

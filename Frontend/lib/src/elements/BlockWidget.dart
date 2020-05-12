@@ -62,13 +62,13 @@ class BlockWidget extends StatelessWidget {
                       Text(
                         block.name,
                         overflow: TextOverflow.fade,
-                        softWrap: false,
+                        softWrap: true,
                         style: Theme.of(context).textTheme.subhead,
                       ),
                       Text(
                         Helper.skipHtml(block.description),
                         overflow: TextOverflow.fade,
-                        softWrap: false,
+                        softWrap: true,
                         style: Theme.of(context).textTheme.caption,
                       ),
                       SizedBox(height: 20),                      

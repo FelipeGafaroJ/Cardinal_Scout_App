@@ -25,12 +25,13 @@ class UserController extends ControllerMVC {
     if (loginFormKey.currentState.validate()) {
       loginFormKey.currentState.save();
       repository.login(user).then((value) {
-        //print(value.apiToken);
+        print(value.apiToken);
         if (value != null && value.apiToken != null) {
           scaffoldKey.currentState.showSnackBar(SnackBar(
             content: Text(S.current.welcome + value.name),
           ));
-          Navigator.of(scaffoldKey.currentContext).pushReplacementNamed('/Pages', arguments: 2);
+          Navigator.of(scaffoldKey.currentContext).pushReplacementNamed('/Home', arguments: 2);
+          print("paso por aca home");
         } else {
           scaffoldKey.currentState.showSnackBar(SnackBar(
             content: Text(S.current.wrong_email_or_password),

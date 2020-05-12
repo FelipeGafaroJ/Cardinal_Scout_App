@@ -28,7 +28,7 @@ class _BlocksCarouselWidgetState extends State<BlocksCarouselWidget> {
     return widget.blocksList.isEmpty
         ? CircularLoadingWidget(height: 288)
         : Container(
-            height: 288,
+            height: 350, //Tamaño contenedor 
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: widget.blocksList.length,
@@ -38,7 +38,7 @@ class _BlocksCarouselWidgetState extends State<BlocksCarouselWidget> {
                     Navigator.of(context).pushNamed('/Blocks',
                         arguments: RouteArgument(
                           id: widget.blocksList.elementAt(index).id,
-                          heroTag: widget.heroTag,
+                          heroTag: widget.heroTag+ widget.blocksList.elementAt(index).id,
                         ));
                   },
                   child: BlockWidget(block: widget.blocksList.elementAt(index), heroTag: widget.heroTag),

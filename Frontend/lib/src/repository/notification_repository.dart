@@ -26,7 +26,6 @@ Future<Stream<Notification>> getNotifications() async {
       .map((data) => Helper.getData(data))
       .expand((data) => (data as List))
       .map((data) {
-    print(data);
     return Notification.fromJSON(data);
   });
 }

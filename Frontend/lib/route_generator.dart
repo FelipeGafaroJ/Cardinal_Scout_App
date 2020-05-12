@@ -1,12 +1,17 @@
+
 import 'package:flutter/material.dart';
 import 'package:com.cardinalscout/src/models/route_argument.dart';
 import 'package:com.cardinalscout/src/pages/login.dart';
 import 'package:com.cardinalscout/src/pages/pages.dart';
+import 'package:com.cardinalscout/src/pages/home.dart';
 import 'package:com.cardinalscout/src/pages/settings.dart';
 import 'package:com.cardinalscout/src/pages/signup.dart';
 import 'package:com.cardinalscout/src/pages/splash_screen.dart';
 import 'package:com.cardinalscout/src/pages/block.dart';
+import 'package:com.cardinalscout/src/pages/category.dart';
+import 'package:com.cardinalscout/src/pages/activity.dart';
 import 'package:com.cardinalscout/src/pages/walkthrough.dart';
+
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -25,12 +30,16 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => LoginWidget());
       case '/ForgetPassword':
         //return MaterialPageRoute(builder: (_) => ForgetPasswordWidget());
+      case '/Home':
+        return MaterialPageRoute(builder: (_) => HomeWidget());
       case '/Pages':
         return MaterialPageRoute(builder: (_) => PagesTestWidget(currentTab: args));
       case '/Blocks':
         return MaterialPageRoute(builder: (_) => BlockWidget(routeArgument: args as RouteArgument));
-      case '/Blocking':
-        //return MaterialPageRoute(builder: (_) => BlockingsWidget(routeArgument: args as RouteArgument));     
+      case '/Activitys':
+        return MaterialPageRoute(builder: (_) => ActivityWidget(routeArgument: args as RouteArgument));
+      case '/Categorys':
+        return MaterialPageRoute(builder: (_) => CategoryWidget(routeArgument: args as RouteArgument));     
       case '/Settings':
         return MaterialPageRoute(builder: (_) => SettingsWidget());
       default:

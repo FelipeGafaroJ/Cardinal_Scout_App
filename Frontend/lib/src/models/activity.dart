@@ -17,15 +17,15 @@ class Activity {
 
   Activity.fromJSON(Map<String, dynamic> jsonMap) {
     id = jsonMap['id'].toString();
-    name = jsonMap['name'];
+    name = jsonMap['name'].toString();
     //image = jsonMap['media'] != null ? Media.fromJSON(jsonMap['media'][0]) : null;
-    slug = jsonMap['slug'];
+    slug = jsonMap['slug'].toString();
     //status = jsonMap['status'];
     //pritority = jsonMap['pritority'];
-    type = jsonMap['type'];
+    //type = jsonMap['type'];
     description = jsonMap['description'];
-    block = jsonMap['block_id'];
-    category = jsonMap['category_id'];
+    //block = jsonMap['block_id'];
+    //category = jsonMap['category_id'];
   }
 
   Map<String, dynamic> toMap() {
@@ -36,10 +36,10 @@ class Activity {
       'slug': slug,
       //'status': status,
       //'pritority': pritority,
-      'type': type,
+      //'type': type,
       'description': description,
-      'block': block,
-      'category': category,
+      //'block': block,
+      //'category': category,
     };
   }
 

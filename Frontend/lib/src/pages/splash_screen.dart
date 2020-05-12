@@ -1,5 +1,11 @@
+
+import 'dart:async';
+
 import 'package:flutter/material.dart';
-import 'package:com.cardinalscout/src/controllers/splash_screen_controller.dart';
+import 'package:flutter/scheduler.dart';
+import 'package:com.cardinalscout/generated/i18n.dart';
+import 'package:com.cardinalscout/src/controllers/controller.dart';
+import 'package:com.cardinalscout/src/repository/user_repository.dart' as userRepo;
 import 'package:mvc_pattern/mvc_pattern.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -10,9 +16,9 @@ class SplashScreen extends StatefulWidget {
 }
 
 class SplashScreenState extends StateMVC<SplashScreen> {
-  SplashScreenController _con;
+  Controller _con;
 
-  SplashScreenState() : super(SplashScreenController()) {
+  SplashScreenState() : super(Controller()) {
     _con = controller;
   }
 
@@ -22,13 +28,16 @@ class SplashScreenState extends StateMVC<SplashScreen> {
     loadData();
   }
 
-  void loadData() {
-    _con.progress.addListener(() {
-      double progress = 0;
-      _con.progress.value.values.forEach((_progress) {
-        progress += _progress;
-      });
-      if (progress == 100) {
+  Future<Timer> loadData() async {
+    return new Timer(Duration(seconds: 5), onDoneLoading);
+  }
+
+  onDoneLoading() async {
+    SchedulerBinding.instance.addPostFrameCallback((_) {
+      print(userRepo.currentUser.value.apiToken);
+      if (userRepo.currentUser.value.apiToken == null) {
+        Navigator.of(context).pushReplacementNamed('/Login');
+      } else {
         Navigator.of(context).pushReplacementNamed('/Pages', arguments: 2);
       }
     });
@@ -40,7 +49,7 @@ class SplashScreenState extends StateMVC<SplashScreen> {
       key: _con.scaffoldKey,
       body: Container(
         decoration: BoxDecoration(
-          color: Theme.of(context).scaffoldBackgroundColor,
+          color: Theme.of(context).accentColor,
         ),
         child: Center(
           child: Column(
@@ -48,14 +57,21 @@ class SplashScreenState extends StateMVC<SplashScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Image.asset(
-                'assets/img/logo.png',
-                width: 150,
-                fit: BoxFit.cover,
+              Icon(
+                Icons.explore,
+                size: 90,
+                color: Theme.of(context).scaffoldBackgroundColor,
+              ),
+              Text(
+                S.of(context).cardinalscout,
+                style: Theme.of(context)
+                    .textTheme
+                    .display1
+                    .merge(TextStyle(color: Theme.of(context).scaffoldBackgroundColor)),
               ),
               SizedBox(height: 50),
               CircularProgressIndicator(
-                valueColor: AlwaysStoppedAnimation<Color>(Theme.of(context).hintColor),
+                valueColor: AlwaysStoppedAnimation<Color>(Theme.of(context).scaffoldBackgroundColor),
               ),
             ],
           ),
@@ -64,3 +80,7 @@ class SplashScreenState extends StateMVC<SplashScreen> {
     );
   }
 }
+
+
+
+

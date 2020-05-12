@@ -18,7 +18,8 @@ class ActivityItemWidget extends StatelessWidget {
       focusColor: Theme.of(context).accentColor,
       highlightColor: Theme.of(context).primaryColor,
       onTap: () {
-        Navigator.of(context).pushNamed('/Activity', arguments: RouteArgument(id: activity.id, heroTag: this.heroTag));
+        Navigator.of(context).pushNamed('/Activitys', arguments: 
+        RouteArgument(id: activity.id, heroTag: this.heroTag));
       },
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 20, vertical: 8),

@@ -22,6 +22,8 @@ class S implements WidgetsLocalizations {
   TextDirection get textDirection => TextDirection.ltr;
 
   String get about => "About";
+  String get activity_refreshed_successfuly => "Actividades Actualizadas con éxito";
+  String get cardinalscout => "Cardinal Scout";
   String get add => "Add";
   String get add_delivery_address => "Add Delivery Address";
   String get add_to_cart => "Add to Cart";
@@ -92,7 +94,7 @@ class S implements WidgetsLocalizations {
   String get maps_explorer => "Maps Explorer";
   String get menu => "Menu";
   String get most_popular => "Most Popular";
-  String get multirestaurants => "Multi-Restaurants";
+  String get multirestaurants => "Multi-Restaurants";  
   String get my_orders => "My Orders";
   String get new_address_added_successfully => "New Address added successfully";
   String get new_order_from_client => "New order from client";
@@ -2017,7 +2019,7 @@ class $es extends S {
   @override
   String get application_preferences => "Preferencias de aplicación";
   @override
-  String get lets_start_with_login => "¡Comencemos con el inicio de sesión!";
+  String get lets_start_with_login => "¡Bienvenidos a Cardinal!";
   @override
   String get verify_your_internet_connection => "Verifica tu conexión a internet";
   @override

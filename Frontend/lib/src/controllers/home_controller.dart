@@ -16,8 +16,8 @@ class HomeController extends ControllerMVC {
 
   HomeController() {
     listenForBlocks();
+    listenForCategories();
     //listenForActivitys();
-    listenForCategorys();
   }
 
   void listenForBlocks() async {
@@ -30,27 +30,31 @@ class HomeController extends ControllerMVC {
   }
 
 
+  
+  void listenForCategories() async {
+    final Stream<Category> stream = await getCategoriesUser();
+    stream.listen((Category _category) {
+      setState(() => categories.add(_category));
+    }, onError: (a) {
+      print(a);
+      }, onDone: () {});
+  }
+
+
   void listenForActivitys() async {
     final Stream<Activity> stream = await getActivitys();
     stream.listen((Activity _activity) {
       setState(() => activitys.add(_activity));
     }, onError: (a) {}, onDone: () {});
   }
-  
-  void listenForCategorys() async {
-    final Stream<Category> stream = await getCategories();
-    stream.listen((Category _category) {
-      setState(() => categories.add(_category));
-    }, onError: (a) {}, onDone: () {});
-  }
-
 
 
   Future<void> refreshHome() async {
     blocks = <Block>[];
     activitys = <Activity>[];
+    categories = <Category>[];
     listenForBlocks();
-    listenForCategorys();
+    //listenForCategories();
     //listenForActivitys();
   }
 

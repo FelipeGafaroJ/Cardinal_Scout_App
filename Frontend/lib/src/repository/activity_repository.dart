@@ -11,34 +11,34 @@ import 'package:http/http.dart' as http;
 
 Future<Stream<Activity>> getActivitys() async {
   
-  final String url = '${GlobalConfiguration().getString('api_base_url')}/activities';
+  final String url = 'http://billing.revoxservices.com/api/activities';
   final client = new http.Client();
   final streamedRest = await client.send(http.Request('get', Uri.parse(url)));
-  print(streamedRest);
-
 
   return streamedRest.stream
       .transform(utf8.decoder)
       .transform(json.decoder)
       .map((data) => Helper.getData(data))
       .expand((data) => (data as List))
-      .map((data) => Activity.fromJSON(data));
-
+      .map((data) {
+    print(Activity.fromJSON(data).toMap());
+    return Activity.fromJSON(data);
+  });
 }
 
-Future<Stream<Activity>> getActivity(String slug) async {
+Future<Stream<Activity>> getActivity(String id) async {
 
-  final String url = '${GlobalConfiguration().getString('api_base_url')}/activities/$slug';
-
+  final String url = 'http://billing.revoxservices.com/api/activities/$id';
+  
   final client = new http.Client();
   final streamedRest = await client.send(http.Request('get', Uri.parse(url)));
-  //print(Block.fromJSON(data).restaurant.toMap());
-    
+
   return streamedRest.stream
       .transform(utf8.decoder)
       .transform(json.decoder)
       .map((data) => Helper.getData(data))
       .map((data) => Activity.fromJSON(data));
+
 
 }
 
@@ -46,7 +46,6 @@ Future<Stream<Activity>> getActivity(String slug) async {
 
 Future<Stream<Activity>> getActivitysOfBlock(String blockId) async {
   
-
   final String url ='http://billing.revoxservices.com/api/blocks/activities/$blockId';
 
   final client = new http.Client();

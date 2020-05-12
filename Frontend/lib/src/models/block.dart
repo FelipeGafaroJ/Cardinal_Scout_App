@@ -16,13 +16,8 @@ class Block {
   Block.fromJSON(Map<String, dynamic> jsonMap) {
     id = jsonMap['id'].toString();
     name = jsonMap['name'].toString();
-    //image = jsonMap['media'] != null ? Media.fromJSON(jsonMap['media'][0]) : null;
     slug = jsonMap['slug'].toString();
-    //status = jsonMap['status'] ?? false;
     description = jsonMap['description']; 
-    activitys = jsonMap['activitys'] != null
-        ? List.from(jsonMap['activitys']).map((element) => Activity.fromJSON(element)).toList()
-        : null;
   }
 
   Map<String, dynamic> toMap() {
@@ -35,6 +30,8 @@ class Block {
       'description': description,
     };
   }
+
+  
   
   @override
   bool operator ==(dynamic other) {

@@ -20,10 +20,9 @@ class CategoryController extends ControllerMVC {
   }
 
   void listenForCategory({String id, String message}) async {
-    final Stream<Category> stream = await getCategory(id);
+    final Stream<Category> stream = await getCategory(id);    
     stream.listen((Category _category) {
       setState(() => category = _category);
-      print(category);
     }, onError: (a) {
       print(a);
       scaffoldKey.currentState.showSnackBar(SnackBar(
@@ -38,22 +37,25 @@ class CategoryController extends ControllerMVC {
     });
   }
   
-/*
+
   void listenForCategorys(String id) async {
+
+    print(id);
+    /*
     final Stream<Category> stream = await getCategorysOfUsers(id);
     stream.listen((Category _category) {
       setState(() => category.add(_category));
     }, onError: (a) {
       print(a);
-    }, onDone: () {});
+    }, onDone: () {});*/
   }
-*/
+
   
   Future<void> refreshCategory() async {
     var _id = category.id;
     category = new Category();
     activitys.clear();
-    listenForCategory(id: _id, message: S.current.restaurant_refreshed_successfuly);
+    //listenForCategory(id: _id, message: S.current.restaurant_refreshed_successfuly);
     //listenForActivitys(_id);
   }
 

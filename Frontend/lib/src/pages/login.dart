@@ -21,7 +21,7 @@ class _LoginWidgetState extends StateMVC<LoginWidget> {
   void initState() {
     super.initState();
     if (userRepo.currentUser.value.apiToken != null) {
-      Navigator.of(context).pushReplacementNamed('/Pages', arguments: 2);
+      Navigator.of(context).pushReplacementNamed('/Home', arguments: 2);
     }
   }
 
@@ -37,16 +37,18 @@ class _LoginWidgetState extends StateMVC<LoginWidget> {
             top: 0,
             child: Container(
               width: config.App(context).appWidth(100),
-              height: config.App(context).appHeight(37),
+              height: config.App(context).appHeight(100),
               decoration: BoxDecoration(color: Theme.of(context).accentColor),
             ),
           ),
           Positioned(
+            
             top: config.App(context).appHeight(37) - 120,
             child: Container(
               width: config.App(context).appWidth(84),
               height: config.App(context).appHeight(37),
               child: Text(
+                /// ACA VA EL MENSAJE de inicio
                 S.of(context).lets_start_with_login,
                 style: Theme.of(context).textTheme.display3.merge(TextStyle(color: Theme.of(context).primaryColor)),
               ),
@@ -84,9 +86,9 @@ class _LoginWidgetState extends StateMVC<LoginWidget> {
                         labelText: S.of(context).email,
                         labelStyle: TextStyle(color: Theme.of(context).accentColor),
                         contentPadding: EdgeInsets.all(12),
-                        hintText: 'johndoe@gmail.com',
+                        hintText: 'cardinal@gmail.com',
                         hintStyle: TextStyle(color: Theme.of(context).focusColor.withOpacity(0.7)),
-                        prefixIcon: Icon(Icons.alternate_email, color: Theme.of(context).accentColor),
+                        prefixIcon: Icon(Icons.mail_outline, color: Theme.of(context).accentColor),
                         border: OutlineInputBorder(
                             borderSide: BorderSide(color: Theme.of(context).focusColor.withOpacity(0.2))),
                         focusedBorder: OutlineInputBorder(
@@ -153,9 +155,11 @@ class _LoginWidgetState extends StateMVC<LoginWidget> {
             ),
           ),
           Positioned(
+            
             bottom: 10,
             child: Column(
-              children: <Widget>[
+              
+             /*  children: <Widget>[
                 FlatButton(
                   onPressed: () {
                     Navigator.of(context).pushReplacementNamed('/ForgetPassword');
@@ -170,7 +174,9 @@ class _LoginWidgetState extends StateMVC<LoginWidget> {
                   textColor: Theme.of(context).hintColor,
                   child: Text(S.of(context).i_dont_have_an_account),
                 ),
-              ],
+              ], */
+
+              
             ),
           )
         ],

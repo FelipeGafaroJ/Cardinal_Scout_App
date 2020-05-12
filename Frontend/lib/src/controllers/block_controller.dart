@@ -22,7 +22,6 @@ class BlockController extends ControllerMVC {
     final Stream<Block> stream = await getBlock(id);
     stream.listen((Block _block) {
       setState(() => block = _block);
-      print(block);
     }, onError: (a) {
       print(a);
       scaffoldKey.currentState.showSnackBar(SnackBar(
@@ -51,7 +50,7 @@ class BlockController extends ControllerMVC {
     var _id = block.id;
     block = new Block();
     activitys.clear();
-    listenForBlock(id: _id, message: S.current.restaurant_refreshed_successfuly);
+    listenForBlock(id: _id, message: S.current.activity_refreshed_successfuly);
     listenForActivitys(_id);
   }
 

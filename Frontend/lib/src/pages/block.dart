@@ -174,6 +174,19 @@ class _BlockWidgetState extends StateMVC<BlockWidget> {
                                         return SizedBox(height: 10);
                                       },
                                       itemBuilder: (context, index) {
+                                        Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Row(
+                                          children: <Widget>[
+                                            Icon(
+                                              Icons.radio_button_unchecked,
+                                              color: Theme.of(context).accentColor,
+                                            ),
+                                          ],
+                                        )
+
+                                        );
+                                        
                                         return ActivityItemWidget(
                                           heroTag: 'activitys_list_block',
                                           activity: _con.activitys.elementAt(index),
